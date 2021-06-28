@@ -11,7 +11,15 @@ html{
     -o-background-size: cover;
     background-size: cover;
 }
+.blur { 
+	-webkit-filter: blur(3px); 
+	-moz-filter: blur(3px); 
+	-o-filter: blur(3px); 
+	-ms-filter: blur(3px); 
+	filter: blur(3px); 
+} 
 .container{
+    
     position:relative;
     margin-left: 100px;
     margin-right:100px;
@@ -19,11 +27,12 @@ html{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    
 
 }
 
 .container > div {
-  background-color: green;
+  background-color: lightblue;
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -66,14 +75,146 @@ html{
 
  
 }
+#form {
+  /* Center the form on the page */
+  display:none;
+  background-color:orange;
+  margin:auto;
+  
+  width: 500px;
+  height:500px;
+  margin-top:-10%;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  z-index: 1;
+
+
+
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  position:relative;
+  display: inline-block;
+  width: 90px;
+  font-size:40px;
+  left: -100px;
+  
+  color:red;
+}
+input {
+
+  font: 30px sans-serif;
+
+  height:50px;
+  width: 300px;
+  box-sizing: border-box;
+  margin-bottom:40px;
+  margin-right:-110px;
+
+ 
+  border: 1px solid #999;
+}
+
+input:focus {
+
+  border-color: #000;
+}
+.button1 {
+ 
+  padding-left: 90px; 
+  margin-left:-40%;
+  padding-top:40px;
+
+}
+#parent {
+    position:absolute;
+    top:40%;
+    right:0;
+    left:0;
+}
+#titlelabel{
+  left: -118px;
+
+}
+
+#authorlabel{
+  left: -110px;
+
+}
+#pageslabel{
+  left: -110px;
+
+}
+#readlabel{
+  left: -112px;
+
+}
+#read{
+  font: 20px sans-serif;
+  height:50px;
+  width: 300px;
+  margin-right:-110px;
+}
+
 </style>
 <body>
 <div>
-    <button class="add" onClick="add()">
+    <button class="add" onClick="visible()">
         +
     </button>
 <div id="container" class="container">
 
+</div>
+
+
+</div>
+<div id="parent" style="text-align:center;"> 
+    <form action="" id="form">
+        <ul>
+         <li>
+           <label for="title" id="titlelabel">Title</label>
+           <input type="text" id="title" name="title" required>
+         </li>
+         <li>
+           <label for="author" id="authorlabel">Author</label>
+           <input type="text" id="author" name="author">
+         </li>
+         <li>
+           <label for="pages" id="pageslabel">Pages</label>
+           <input type="number" id="pages" name="pages" min="0" value="0"></textarea>
+           
+         </li>
+         <li>
+          <label for="read" id="readlabel">Read</label>
+          <select name="read" id="read">
+            <option value="read">Already Read </option>
+            <option value="not read">Not Read yet</option>
+       
+          </select>
+          <br><br>
+
+          
+        </li>
+         <li class="button1">
+            <input type="button" id="button1" value="Add" ></input>
+          </li>
+    
+        </ul>
+        
+       </form>
 </div>
 
 </body>
@@ -91,4 +232,15 @@ html{
 
 
 <script type="text/javascript" src="library.js">
+
 </script>
+<!--<script>
+    <form NAME="myform" ACTION="" METHOD="GET">Enter something in the box: <BR>
+    <INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+    <INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
+    </form>
+        function testResults (form) {
+    var TestVar = form.inputbox.value;
+    alert ("You typed: " + TestVar);
+}
+
