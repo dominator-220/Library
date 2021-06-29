@@ -26,15 +26,34 @@
     <link href="css/main.css" rel="stylesheet" media="all">
     <style>
         .display{
-            display:solid;
+            display:block;
             background:white;
+            position:absolute;
+            top:20%;
+         
+            left: 100px;
+            right:0;
+
+        }
+        .button1{
+            height:100px;
+            width:100px;
+            background-color:blue;
+        }
+        .display1{
+        
+            /*z-index: 1;*/
+           
         }
     </style>
 </head>
 
 <body>
+    <button class="button1">
+        +
+    </button>
     <div id="formcontainer" class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins display">
-        <div class="wrapper wrapper--w780">
+        <div class="wrapper wrapper--w780 display1">
             <div class="card card-3">
                 <div class="card-heading"></div>
                 <div class="card-body">

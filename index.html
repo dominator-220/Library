@@ -1,15 +1,45 @@
 x
 <!DOCTYPE html>
-<header>
 
+<header>
+    
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Library</title>
+
+    <!-- Icons font CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Akaya Kanadaka' rel='stylesheet'>
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
 
 <style>
+
+    
+
 html{
-    background:url(pexels-karolina-grabowska-4219214.jpg) no-repeat center center fixed;
+    /*background:url(pexels-karolina-grabowska-4219214.jpg) no-repeat center center fixed;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: Sofia;
 }
 .blur { 
 	-webkit-filter: blur(3px); 
@@ -23,43 +53,85 @@ html{
     position:relative;
     margin-left: 100px;
     margin-right:100px;
-    margin-top:100px;
+    margin-top:130px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    
     
 
 }
 
 .container > div {
-  background-color: lightblue;
+  background-color:rgb(187, 255, 0);
   text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-  height:200px;
-  border-radius:2%;
+  padding: 20px ;
+  font-size:  37px;
+  height:394px;
+  width:299px;
+  border:2px solid;
+  border-radius: 1%;
   text-align: left;
   padding-left: 20px;
+  border-radius: 1%;
+  
 }
 .button{
-    position:relative;
+    font-family: 'Akaya Kanadaka';
+    
     height:50px;
-    width:120px;
-    float: left;
-    margin-right:20px;
-    margin-top:15px;
+    width:296px;
+    
+    
+    margin-left:-20px;
+    margin-top:10px;
+    font-size:20px;
+    
 
 }
 .remove{
-    float:right;
+    margin-top:10px;
+    margin-bottom: -70px;
+    outline: 2px solid;
+    
+    
+    background-color: #2185d5;
+    background-image:url("trash.jpg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+
+    background-position: 15px ,610px; 
 }
+
+.readbook{
+    margin-top:60px;
+    margin-bottom: -8px;
+    outline: 2px solid;
+ 
+    background-color :rgb(35, 255, 171);
+    background-image:url("read.jpg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    
+
+    background-position: 15px ,610px
+
+    
+}
+
 .add{
     position:absolute;
-    margin-top:-40px;
+    margin-top:32%;
+    margin-left: 90%;
     height:60px;
     width:60px;
     border-radius:50%;
     font-size:40px;
+    background:linear-gradient(54.7deg,  #fa1c54 12%,#dee061 100%);
+
+    transition: 0.5s ease;
+    
 
 }
 .add:active{
@@ -68,154 +140,162 @@ html{
 .add:hover{
     outline:none;
     transform: scale(1.1);
+    
 }
 
-.add:focus{
-    outline:none;
-
- 
-}
-#form {
-  /* Center the form on the page */
-  display:none;
-  background-color:orange;
-  margin:auto;
-  
-  width: 500px;
-  height:500px;
-  margin-top:-10%;
-  /* Form outline */
-  padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 1em;
-  z-index: 1;
 
 
-
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#form li + li {
-  margin-top: 1em;
-}
-
-label {
-  /* Uniform size & alignment */
-  position:relative;
-  display: inline-block;
-  width: 90px;
-  font-size:40px;
-  left: -100px;
-  
-  color:red;
-}
-input {
-
-  font: 30px sans-serif;
-
-  height:50px;
-  width: 300px;
-  box-sizing: border-box;
-  margin-bottom:40px;
-  margin-right:-110px;
-
- 
-  border: 1px solid #999;
-}
-
-input:focus {
-
-  border-color: #000;
-}
-.button1 {
- 
-  padding-left: 90px; 
-  margin-left:-40%;
-  padding-top:40px;
-
-}
-#parent {
+#formcontainer{
+    display:block;
+    background: linear-gradient(54.7deg,  #fd47df 12%,#6a4ee9 100%);
     position:absolute;
-    top:40%;
+    top:0%;
     right:0;
     left:0;
-}
-#titlelabel{
-  left: -118px;
+
+    
+    
+    
+    
+    
 
 }
+.display1{
+    position:absolute;
+    top:20%;
+    right:0;
+    left:0;
+    display:none;
+}
+.title1,.author,.pages,.read1,.date{
+    font-family: 'Akaya Kanadaka';
+    border-bottom: 2px solid;
+    margin-left: -20px;
+    margin-right:-21px;
+    padding-left:15px;
+    
+    
+}
+.read1{
+    
+    border-bottom:0px;
+      
+}
+.title1{
+    margin-top:-20px;
+    margin-right:-20px;
+    background-color: #2185d5;
+}
+#info{
+    margin-top:-180px;
+    height:250px;
+    width:100%;
+    background-color: black;
+    background-image:url("library1.jpg");
+    background-repeat: no-repeat;
+    background-size: 200px;
 
-#authorlabel{
-  left: -110px;
+
+    background-position: 470px; 
+    background-position-y: 0px;
 
 }
-#pageslabel{
-  left: -110px;
+.intro,.totalBooks,.totalPages,.totalread{
+    animation: glow 1s ease-in-out infinite alternate;
+    color: #fff;
+    position:absolute;
+    font-family: 'Akaya Kanadaka';
+    font-size:70px;
+    
+}
+
+
+.totalBooks,.totalPages,.totalread{
+    margin-top:8%;
+    font-size: 60px;
+}
+.intro{
+    margin-left:2%;
+ 
+}
+.totalBooks{
+    margin-left: 2%;
+}
+.totalPages{
+    margin-left: 36%;
 
 }
-#readlabel{
-  left: -112px;
-
+.totalread{
+   
+    margin-left:75%;
 }
-#read{
-  font: 20px sans-serif;
-  height:50px;
-  width: 300px;
-  margin-right:-110px;
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 </style>
 <body>
-<div>
-    <button class="add" onClick="visible()">
+
+<div id="formcontainer" class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins display">
+    <div id="info">
+
+    </div>
+    <button class="add" onClick="visible(this)">
         +
     </button>
-<div id="container" class="container">
+    <div id="container" class="container">
 
+    </div>
+  <div id="card" class="wrapper wrapper--w780 display1">
+      <div class="card card-3">
+          <div class="card-heading"></div>
+          <div class="card-body">
+              <h2 class="title">Registration Info</h2>
+              <form action="" id="form">
+                  <div class="input-group">
+                      <input class="input--style-3" type="text" placeholder="Title" name="title" required>
+                  </div>
+                  <div class="input-group">
+                      <input class="input--style-3" type="text" placeholder="Author" name="author">
+                  </div>
+                  <div class="input-group">
+                      <input class="input--style-3" type="number" placeholder="Pages" name="pages" min="0">
+                  </div>
+                  <div class="input-group">
+                      <input class="input--style-3 js-datepicker" type="text" placeholder="Date of publishion" name="publishiondate">
+                      <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                  </div>
+                  <div class="input-group">
+                      <div class="rs-select2 js-select-simple select--no-search">
+                          <select name="read">
+                              <option disabled="disabled" selected="selected">Read</option>
+                              <option>Read already</option>
+                              <option>Not read</option>
+                              
+                          </select>
+                          <div class="select-dropdown"></div>
+                      </div>
+                  </div>
+              
+              
+                  <div class="p-t-10">
+                      <input type="button" class="btn btn--pill btn--green" id="button1" value="Submit"></input>
+
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
 </div>
 
 
-</div>
-<div id="parent" style="text-align:center;"> 
-    <form action="" id="form">
-        <ul>
-         <li>
-           <label for="title" id="titlelabel">Title</label>
-           <input type="text" id="title" name="title" required>
-         </li>
-         <li>
-           <label for="author" id="authorlabel">Author</label>
-           <input type="text" id="author" name="author">
-         </li>
-         <li>
-           <label for="pages" id="pageslabel">Pages</label>
-           <input type="number" id="pages" name="pages" min="0" value="0"></textarea>
-           
-         </li>
-         <li>
-          <label for="read" id="readlabel">Read</label>
-          <select name="read" id="read">
-            <option value="read">Already Read </option>
-            <option value="not read">Not Read yet</option>
-       
-          </select>
-          <br><br>
-
-          
-        </li>
-         <li class="button1">
-            <input type="button" id="button1" value="Add" ></input>
-          </li>
-    
-        </ul>
-        
-       </form>
-</div>
 
 </body>
 
@@ -230,7 +310,15 @@ input:focus {
 
 
 
+<!-- Jquery JS-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<!-- Vendor JS-->
+<script src="vendor/select2/select2.min.js"></script>
+<script src="vendor/datepicker/moment.min.js"></script>
+<script src="vendor/datepicker/daterangepicker.js"></script>
 
+<!-- Main JS-->
+<script src="js/global.js"></script>
 <script type="text/javascript" src="library.js">
 
 </script>
