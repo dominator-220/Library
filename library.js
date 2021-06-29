@@ -66,8 +66,11 @@ let intro=document.createElement("span");
 intro.className+="intro";
 intro.innerHTML="Virtual Library";
 info.appendChild(intro);
-
 let totalBooks=1;
+
+
+
+
 let totalBooktag=document.createElement("span");
 totalBooktag.innerHTML="Total Books: " +""+totalBooks+"";
 totalBooktag.className+="totalbooks"
